@@ -1,3 +1,6 @@
+'''
+This is about tensorboard 1
+'''
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
@@ -46,7 +49,7 @@ with tf.name_scope('train'):
 
 with tf.Session() as sess:
     merged = tf.merge_all_summaries()
-    writer = tf.train.SummaryWriter("logs/",sess.graph_def)
+    writer = tf.train.SummaryWriter("logs/",sess.graph)
     sess.run(tf.initialize_all_variables())
 
     for i in range(1000):

@@ -52,6 +52,7 @@ for i in range(1000):
             pass
 
         prediction_value=sess.run(prediction,feed_dict={xs:x_data})
+        # print(prediction_value)
         lines=ax.plot(x_data,prediction_value,'r-',lw=5)
         plt.pause(0.5)
 

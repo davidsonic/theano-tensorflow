@@ -1,5 +1,6 @@
 '''
 overfitting/drop out
+This is the second about tensorboard 2
 '''
 
 import numpy as np
@@ -50,8 +51,8 @@ train_step=tf.train.GradientDescentOptimizer(0.5).minimize(cross_entropy)
 sess=tf.Session()
 merged=tf.merge_all_summaries()
 # summary writer
-train_writer=tf.train.SummaryWriter('logs/train',sess.graph_def)
-test_writer=tf.train.SummaryWriter('logs/test',sess.graph_def)
+train_writer=tf.train.SummaryWriter('logs/train',sess.graph)
+test_writer=tf.train.SummaryWriter('logs/test',sess.graph)
 
 sess.run(tf.initialize_all_variables())
 
